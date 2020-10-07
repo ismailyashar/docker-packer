@@ -20,9 +20,9 @@ else {
     error("Branch name didn't match RegEx")
 }
 
-node {
+node("packer") {
     stage('Pull Repo') {
-        git 'https://github.com/ikambarov/packer.git'
+        git 'https://github.com/ikambarov/docker-packer.git'
     }
 
     def ami_name = "apache-${UUID.randomUUID().toString()}"
