@@ -22,7 +22,7 @@ else {
 
 node("packer") {
     stage('Pull Repo') {
-        git 'https://github.com/ikambarov/docker-packer.git'
+        git 'https://github.com/ismailyashar/docker-packer.git'
     }
 
     def ami_name = "apache-${UUID.randomUUID().toString()}"
